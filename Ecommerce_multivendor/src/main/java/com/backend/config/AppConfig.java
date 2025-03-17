@@ -14,8 +14,8 @@ import org.springframework.web.cors.CorsConfigurationSource;
 
 import java.util.Collections;
 
-@Configuration
-@EnableWebSecurity
+@Configuration // Bu sınıfın bir yapılandırma sınıfı olduğunu belirtir.
+@EnableWebSecurity // Spring Security'yi etkinleştirir.
 public class AppConfig {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{

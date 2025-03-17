@@ -73,7 +73,35 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<!-- JJWT API -->
+		<!--
+		Yeni sürümlerde bazı API değişiklikleri olabilir. Örneğin, Jwts.parser() metodu artık kullanımdan kaldırılmıştır.
+		 Bunun yerine, Jwts.parserBuilder() metodunu kullanarak bir JwtParser nesnesi oluşturabilirsiniz. 0.12.6
+		-->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.1</version>
+		</dependency>
 
+		<!-- JJWT Implementation -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.1</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- JJWT Jackson Integration -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

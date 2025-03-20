@@ -17,7 +17,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +43,7 @@ public class AuthServiceImpl implements AuthService {
             createdUser.setEmail(req.getEmail());
             createdUser.setRole(USER_ROLE.ROLE_CUSTOMER);
             createdUser.setMobile(req.getMobile());
-            createdUser.setPassword(passwordEncoder.encode(req.getPassword()));  // DÜZELTİLDİ
+            createdUser.setPassword(passwordEncoder.encode(req.getPassword()));
 
             user = userRepository.save(createdUser);
 
